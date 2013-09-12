@@ -6,6 +6,19 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'mysql2'
+#gem 'httparty'
+#gem 'omniauth'
+#gem 'omniauth-facebook'
+#gem 'omniauth-google-oauth2'
+#gem 'omniauth-twitter'
+#gem 'omniauth-yahoo'
+#gem 'omniauth-windowslive'
+#gem 'omniauth-foursquare'
+#gem 'koala'
+gem 'pdfkit'
+gem 'exifr'
+gem "paperclip", "~> 3.0"
 
 
 # Gems used only for assets and not required
