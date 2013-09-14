@@ -1,4 +1,18 @@
 Roly::Application.routes.draw do
+  get "admin/search_preferences"
+
+  get "admin/privacy_preferences"
+
+  get "admin/account"
+
+  match '/' => "roly#home"
+
+  get "roly/search"
+
+  get "roly/detail"
+
+  get "roly/map"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

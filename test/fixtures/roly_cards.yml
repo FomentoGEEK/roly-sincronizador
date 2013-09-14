@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  web_page: MyString
+  facebook: MyString
+  twitter: MyString
+  facebook_likes: 1
+  twitter_tweets: 1
+  google: MyString
+  google_circles: MyString
+  foursquare: MyString
+  foursquare_checkins: 1
+  latitude: 1
+  longitude: 1
+  address: MyString
+  telephone: MyString
+  email: MyString
+
+two:
+  title: MyString
+  web_page: MyString
+  facebook: MyString
+  twitter: MyString
+  facebook_likes: 1
+  twitter_tweets: 1
+  google: MyString
+  google_circles: MyString
+  foursquare: MyString
+  foursquare_checkins: 1
+  latitude: 1
+  longitude: 1
+  address: MyString
+  telephone: MyString
+  email: MyString
