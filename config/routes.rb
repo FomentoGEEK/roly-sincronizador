@@ -5,7 +5,21 @@ Roly::Application.routes.draw do
 
   get "admin/account"
 
+  get "admin/my_roly_cards"
+
+  get "admin/my_albums"
+
+  get "admin/my_favorites"
+
+  get "admin/recieve_rcard"
+
+  get "admin/edit_account"
+  
+
+  match "app_info" => "admin#app_info"
+
   match '/' => "roly#home"
+  match '/roly/:roly_id' => "roly#detail"
 
   get "roly/search"
 

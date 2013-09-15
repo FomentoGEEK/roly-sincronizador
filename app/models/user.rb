@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   has_many :group
   has_many :business
   
+  
 end

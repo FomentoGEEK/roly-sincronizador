@@ -1,2 +1,10 @@
 <h1>Roly#home</h1>
 <p>Find me in app/views/roly/home.html.erb</p>
+<table>
+<% @rolies.each do |roly| %>
+    <tr>
+      <td><a href="/roly/<%= roly.id%>"><%= roly.title %></a></td>
+      <td><%= roly.web_page %></td>
+    </tr>
+<% end %>
+</table>
