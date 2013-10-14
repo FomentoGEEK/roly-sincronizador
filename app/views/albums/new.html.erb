@@ -1,0 +1,8 @@
+<h1>New Album</h1>
+<div>
+	<%= form_for @new_album_form , url: request.path, :html => {:id => 'submit_form'} do |f| %>
+	<%= f.text_field :name, html_options = {:id => 'name', :size => '20', :placeholder => 'Name'} %>
+  	<%= submit_tag("Create") %>
+	<% end %>
+</div>
+

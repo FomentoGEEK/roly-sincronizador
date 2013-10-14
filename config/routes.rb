@@ -5,27 +5,50 @@ Roly::Application.routes.draw do
 
   get "admin/account"
 
-  get "admin/my_roly_cards"
-
-  get "admin/my_albums"
-
-  get "admin/my_favorites"
-
-  get "admin/recieve_rcard"
-
   get "admin/edit_account"
   
-
   match "app_info" => "admin#app_info"
+  
+  # my businesses
+  match '/businesses/view/:business_id' => "businesses#view_business"
+  match '/businesses/add/:business_id' => "businesses#add"
+  match '/businesses/new' => "businesses#new"
+  match "/businesses/my" => "businesses#show"
+  
+  # my roly cards
+  match '/my_roly_cards/view/:roly_id' => "my_roly_cards#view"
+  match '/my_roly_cards/edit/:roly_id' => "my_roly_cards#edit"
+  match '/my_roly_cards/new' => "my_roly_cards#new"
+  match "/my_roly_cards/my" => "my_roly_cards#show"
+  match "/my_roly_cards/share/:roly_id" => "my_roly_cards#share"
+  
+  # album controller
+  match '/albums/edit/:album_id' => "albums#edit_album"
+  match '/albums/view/:album_id' => "albums#view_album"
+  match '/albums/add/:album_id' => "albums#add"
+  match '/albums/new' => "albums#new"
+  match "/albums/my" => "albums#show"
+  match "/albums/favorites" => "albums#favorite"
+  match "/albums/recent" => "albums#recent"
+  match "/albums/recently_added" => "albums#recently_added"
+  match "/albums/today" => "albums#today"
+  
+  # roly cards  
 
-  match '/' => "roly#home"
+  match '/roly/get_card' => "roly#get_card"
   match '/roly/:roly_id' => "roly#detail"
+  match '/roly/share/:roly_id' => "roly#share"
 
   get "roly/search"
 
   get "roly/detail"
 
   get "roly/map"
+
+  # roly share 
+  match '/qr' => "roly#qrcode"
+  match '/' => "albums#recent"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

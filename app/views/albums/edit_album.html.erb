@@ -1,0 +1,31 @@
+<a href="/albums/my">Mis álbumes</a>
+<a href="/albums/view/<%= @album.id %>">Cancelar Edición</a>
+
+<h1>Album '<%= @album.name %>'</h1>
+	<%= form_for @edit_album_form , multipart: true, url: request.path, :html => {:id => 'submit_form',:multipart => true} do |f| %>
+	<%= f.text_field :name, html_options = {:id => 'name', :size => '20', :placeholder => 'Name'} %>
+  	<%= submit_tag("Update") %>
+<% end %>
+</div>
+<table>
+	<% @rolies.each do |roly| %>
+	<tr>
+		<td><a href="/my_roly_cards/view/<%= roly.id%>"><%= image_tag roly.photo.url(:thumb), :style => "width:50px;padding:10px;vertical-align:middle" %></a></td>
+		<td><a href="/my_roly_cards/view/<%= roly.id%>"><%= roly.title %></a><br /><%= roly.address %><br />
+			<% if !roly.twitter.nil? %>
+			<img src="/images/thumb/twitter.png" width="16" height="16">
+			<% end %>
+			<% if !roly.facebook.nil? %>
+			<img src="/images/thumb/facebook.png" width="16" height="16">
+			<% end %>
+			<% if !roly.foursquare.nil? %>
+			<img src="/images/thumb/foursquare.png" width="16" height="16">
+			<% end %>
+			<% if !roly.google.nil? %>
+			<img src="/images/thumb/map.png" width="16" height="16">
+			<% end %>
+		</td>
+		<td></td>
+	</tr>
+	<% end %>
+</table>

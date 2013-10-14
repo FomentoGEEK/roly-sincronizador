@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Roly MKI</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<a href="/admin/account">Mis Datos</a>
-<a href="/">Mis Rolys</a>
-<%= yield %>
+	<head>
+		<title>Roly MKI</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		<style type="text/css">
+			body {
+				font-family: Arial
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<div style="border:1px #70b8ff dashed;height:900px;width:300px">
+				<table style="border:1px #70b8ff dashed;width:300px">
+					<tr>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/roly/search">Search</a>
+						</div></td>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/my_roly_cards/my">My Rolies</a>
+						</div></td>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/roly/get_card">Get Roly</a>
+						</div></td>
+					</tr>
+					<tr>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/albums/recently_added">Recent</a>
+						</div></td>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/albums/favorites">Favorites</a>
+						</div></td>
+						<td style="border:1px #70b8ff dashed">
+						<div style="text-align:center">
+							<a href="/albums/today">Today's</a>
+						</div></td>
+					</tr>
+				</table>
+				<%= yield %>
 
-</body>
+			</div>
+		</div>
+		<div style="border:1px #70b8ff dashed;width:300px">
+			<p style="text-align: center">
+				<a href="/admin/account">Profile</a> 2013 roly
+			</p>
+
+		</div>
+	</body>
 </html>

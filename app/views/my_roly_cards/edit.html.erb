@@ -1,0 +1,56 @@
+<div>
+	Share
+</div>
+<div>
+	<a href="/my_roly_cards/edit/1">Edit</a>
+</div>
+	<%= form_for @edit_roly_form , multipart: true, url: request.path, :html => {:id => 'submit_form',:multipart => true} do |f| %>
+<%= f.file_field  :photo %>
+<div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
+</div>
+<div>
+	<%= f.text_field :title, html_options = {:id => 'title', :size => '20', :placeholder => 'Name'} %>
+	<br>
+	<%= f.text_field :address, html_options = {:id => 'address', :size => '20', :placeholder => 'Address'} %>
+</div>
+
+<div>
+	<%= f.text_area :description, html_options = {:id => 'title', :cols => '35', :rows => '10', :placeholder => 'Description'} %>
+</div>
+	
+
+<hr>
+<table style="border:1px #70b8ff dashed;width:300px">
+	<tr>
+		<td style="border:1px #70b8ff dashed">
+		<div style="text-align:center">
+			<%= f.text_field :web_page, html_options = {:id => 'web_page', :size => '20', :placeholder => 'Web Page'} %>
+		</div></td>
+		<td style="border:1px #70b8ff dashed">
+</td>
+</tr>
+</table>
+<hr>
+
+<img src="http://midcitymessenger.com/wp-content/uploads/2013/08/13_8_12restaurantmap.jpg" width="300" height="250">
+
+<hr>
+
+<table style="border:1px #70b8ff dashed;height:50px;width:300px">
+	<tbody>
+		<tr>
+			<td style="border:1px #70b8ff dashed">
+			<div>
+	<%= f.text_field :telephone, html_options = {:id => 'email', :size => '15', :placeholder => 'Telephone'} %>
+			</div></td>
+			<td style="border:1px #70b8ff dashed;text-align:right">
+			<div>
+	<%= f.text_field :email, html_options = {:id => 'web_page', :size => '15', :placeholder => 'Email'} %>
+			</div></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+  	<%= submit_tag("Update") %>
+	<% end %>

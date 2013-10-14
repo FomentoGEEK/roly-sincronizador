@@ -1,13 +1,10 @@
-<h1>Admin#account</h1>
-<p>Find me in app/views/admin/account.html.erb</p>
-
-<p><a href="edit_account">Edit Profile</a></p>
-<p>Avatar</p>
+<p><%= image_tag @user.photo.url(:thumb), :style => "width:80px;padding:10px;vertical-align:middle" %><%= @user.first_name %> <%= @user.last_name %> <%= @user.middle_name %></p>
+<p style="text-align: right"><a href="edit_account">Edit Profile</a></p>
+<p></p>
 <p><%= @user.username %></p>
-<p><%= @user.first_name %> <%= @user.last_name %> <%= @user.middle_name %></p>
-<p><%= @user.email %></p><%= @user.email %>
-<p><a href="my_roly_cards">My Roly Cards</a></p>
-<p><a href="my_albums">My Albums</a></p>
-<p><a href="my_favorites">My Favorites</a></p>
-<p><a href="recieve_rcard">Recieve R-card</a></p>
+<p><%= @user.email %></p>
+<p><a href="/my_roly_cards/my">My Roly Cards</a></p>
+<p><a href="/albums/my">My Albums</a></p>
+<p><a href="/albums/favorites">My Favorites</a></p>
+<p><a href="/roly/get_card">Recieve R-card</a></p>
 <p><a href="/app_info">App Info</a></p>

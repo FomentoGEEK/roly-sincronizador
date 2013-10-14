@@ -1,0 +1,12 @@
+<h1>My Albums</h1>
+<a href="/albums/new">New Album </a>
+
+<table>
+	<% @albums.each do |album| %>
+	<tr>
+		<td><a href="/albums/view/<%= album.id %>"><img src="" width="65" height="65"></a></td>
+		<td><a href="/albums/view/<%= album.id %>"><%= album.name %></a></td>
+		<td></td>
+	</tr>
+<% end %>
+</table>

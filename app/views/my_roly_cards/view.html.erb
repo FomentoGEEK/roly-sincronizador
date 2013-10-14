@@ -1,0 +1,87 @@
+<div><a href="/my_roly_cards/share/<%= @roly.id %>">Share</a></div>
+<div><a href="/my_roly_cards/edit/<%= @roly.id %>">Edit</a></div>
+<div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
+</div>
+<div>
+	Business Unassigned
+</div>
+<div>
+	<%= @roly.title %>
+	<br>
+	<%= @roly.address %>
+</div>
+
+<div>
+	<%= @roly.description %>
+</div>
+
+<hr>
+<table style="border:1px #70b8ff dashed;width:300px">
+	<tr>
+		<td style="border:1px #70b8ff dashed">
+		<div style="text-align:center">
+			<%= @roly.web_page %>
+		</div></td>
+		<td style="border:1px #70b8ff dashed">
+		<table style="border:1px #70b8ff dashed">
+			<tbody>
+				<tr>
+					<td>
+					<div><img src="http://www.iessantafe.edu.ar/iesweb/img/facebook-icon.png">
+					</div><td>
+					<div>
+						<%= @roly.facebook %> 3
+					</div></td>
+					<td>
+					<div>
+						likes
+					</div></td>
+		</td>
+	</tr>
+	</tbody>
+</table>
+</td>
+<td style="border:1px #70b8ff dashed">
+<table style="border:1px #70b8ff dashed">
+	<tbody>
+		<tr>
+			<td>
+			<div><img src="http://bleachtree.com/images/twitter_icon.png">
+			</div><td>
+			<div>
+				<%= @roly.twitter %> 98
+			</div></td>
+			<td>
+			<div>
+				followers
+			</div></td>
+</td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+
+<img src="http://midcitymessenger.com/wp-content/uploads/2013/08/13_8_12restaurantmap.jpg" width="300" height="250">
+
+<hr>
+
+<table style="border:1px #70b8ff dashed;height:50px;width:300px">
+	<tbody>
+		<tr>
+			<td style="border:1px #70b8ff dashed">
+			<div>
+				<img src="https://cdn1.iconfinder.com/data/icons/metro-uinvert-dock/256/Phone.png" width="50" height="50">
+				<%= @roly.telephone %>
+			</div></td>
+			<td style="border:1px #70b8ff dashed;text-align:right">
+			<div>
+				<input type="button" value="Email">
+				<%= @roly.email %>
+			</div></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr>

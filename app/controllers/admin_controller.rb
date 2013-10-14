@@ -1,5 +1,8 @@
 class AdminController < ApplicationController
   
+  layout "admin"
+  #, :only => [:action, :action], :except => [:action, :action]
+  
   before_filter :login_required, :except => [:login]
   
   def search_preferences

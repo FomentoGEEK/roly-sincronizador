@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Roly MKI</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div>
+			<div style="border:1px #70b8ff dashed;height:900px;width:300px">
+        <table style="border:1px #70b8ff dashed;width:300px">   
+            <tr>
+                <td style="border:1px #70b8ff dashed"><div style="text-align:center"><a href="/">Home</a></div></td>
+                <td style="border:1px #70b8ff dashed"><div style="text-align:center"><a href="/my_roly_cards/my">My Roly</a></div></td>
+                <td style="border:1px #70b8ff dashed"><div style="text-align:center"><a href="/logout">Logout</a></div></td>
+            </tr>
+        </table>
+				<%= yield %>
+
+				
+			</div>
+		</div>
+		<div style="border:1px #70b8ff dashed;width:300px">
+			<p style="text-align: center">
+					2013 roly
+				</p>
+
+		</div>
+	</body>
+</html>

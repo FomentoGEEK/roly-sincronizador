@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130914224111) do
+ActiveRecord::Schema.define(:version => 20131013233027) do
 
   create_table "album_roly_cards", :force => true do |t|
     t.string   "notes"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20130914224111) do
     t.datetime "updated_at",   :null => false
     t.integer  "album_id"
     t.integer  "roly_card_id"
+    t.datetime "last_viewed"
+    t.datetime "last_edited"
   end
 
   create_table "albums", :force => true do |t|
@@ -37,9 +39,13 @@ ActiveRecord::Schema.define(:version => 20130914224111) do
     t.string   "name"
     t.string   "web_page"
     t.string   "contact_email"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "friends", :force => true do |t|
@@ -83,6 +89,12 @@ ActiveRecord::Schema.define(:version => 20130914224111) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.integer  "business_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "user_id"
+    t.text     "description"
   end
 
   create_table "users", :force => true do |t|
@@ -93,8 +105,12 @@ ActiveRecord::Schema.define(:version => 20130914224111) do
     t.string   "username"
     t.string   "password"
     t.integer  "status"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end
