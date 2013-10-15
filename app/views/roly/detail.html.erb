@@ -1,14 +1,14 @@
-<div>Share</div>
-<div><img src="http://www.photoflyer.com/wp-content/uploads/2013/03/Stichting-Monkey-Business-logo1-300x150.jpg" height="150" width="300">
+<div><a href="">Share</a></div>
+<div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
 </div>
 <div>
-	Monkey Business
+	<%= @roly.title %>
 	<br>
-	San Francisco, CA
+	<%= @roly.address %>
 </div>
 
 <div>
-	Lorem ipsum dolor sit amet, consectetur adipisc 1.Lorem ipsum dolor sit amet, consectetur adipisc 2. Lorem ipsum dolor sit amet, consectetur adipisc 3.
+	<%= @roly.description %>
 </div>
 
 <hr>
@@ -16,7 +16,7 @@
 	<tr>
 		<td style="border:1px #70b8ff dashed">
 		<div style="text-align:center">
-			Website link
+			<%= @roly.web_page %>
 		</div></td>
 		<td style="border:1px #70b8ff dashed">
 		<table style="border:1px #70b8ff dashed">
@@ -26,7 +26,7 @@
 					<div><img src="http://www.iessantafe.edu.ar/iesweb/img/facebook-icon.png">
 					</div><td>
 					<div>
-						3
+						<%= @roly.facebook %>3
 					</div></td>
 					<td>
 					<div>
@@ -45,7 +45,7 @@
 			<div><img src="http://bleachtree.com/images/twitter_icon.png">
 			</div><td>
 			<div>
-				98
+				<%= @roly.twitter %>98
 			</div></td>
 			<td>
 			<div>
@@ -68,13 +68,13 @@
 		<tr>
 			<td style="border:1px #70b8ff dashed">
 			<div>
-				<img src="https://cdn1.iconfinder.com/data/icons/metro-uinvert-dock/256/Phone.png" width="50" height="50">
+				<%= @roly.telephone %><img src="https://cdn1.iconfinder.com/data/icons/metro-uinvert-dock/256/Phone.png" width="50" height="50">
 				<input type="button" value="Call">
 			</div></td>
 			<td style="border:1px #70b8ff dashed;text-align:right">
 			<div>
 				<input type="button" value="Email">
-				<img src="http://www.clker.com/cliparts/3/e/2/5/12401677931387382913Anonymous_Mail_1_icon.svg.hi.png" height="40">
+				<%= @roly.email %><img src="http://www.clker.com/cliparts/3/e/2/5/12401677931387382913Anonymous_Mail_1_icon.svg.hi.png" height="40">
 			</div></td>
 		</tr>
 	</tbody>

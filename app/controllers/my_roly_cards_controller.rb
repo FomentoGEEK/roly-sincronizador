@@ -23,6 +23,7 @@ class MyRolyCardsController < ApplicationController
       @roly.update_attributes(params[:edit_roly_form])
       @edit_roly_form = EditRolyForm.new(@roly)
       @roly.save
+      redirect_to "/my_roly_cards/view/"+@roly.id.to_s
     end
   end
   

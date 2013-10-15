@@ -1,7 +1,7 @@
 <h1>My Rolies</h1>
 <p><a href="/my_roly_cards/new">New Roly</a></p>
 
-<div>Unassigned Business</div>
+<div><!-- Business div --></div>
 <table>
 	<% @rolies.each do |roly| %>
 	<tr>
@@ -24,19 +24,3 @@
 	</tr>
 	<% end %>
 </table>
-<div>Fomento Geek</div>
-<table>
-	<% @rolies.each do |roly| %>
-	<tr>
-		<td><a href="/my_roly_cards/view/<%= roly.id%>"><%= image_tag roly.photo.url(:thumb), :style => "width:50px;padding:10px;vertical-align:middle" %></a></td>
-		<td><a href="/my_roly_cards/view/<%= roly.id%>"><%= roly.title %></a><br /><%= roly.address %><br />
-			<img src="/images/thumb/twitter.png" width="16" height="16">
-			<img src="/images/thumb/facebook.png" width="16" height="16">
-			<img src="/images/thumb/foursquare.png" width="16" height="16">
-			<img src="/images/thumb/map.png" width="16" height="16">
-		</td>
-		<td></td>
-	</tr>
-	<% end %>
-</table>
-

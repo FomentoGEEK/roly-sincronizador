@@ -22,6 +22,10 @@ class Album < ActiveRecord::Base
     RolyCard.joins("LEFT JOIN album_roly_cards ON album_roly_cards.roly_card_id = roly_cards.id LEFT JOIN albums ON albums.id = album_roly_cards.album_id").where("albums.user_id = ?", user)
   end
   
+  def self.get_recent_rolies(user, limit)
+    #AlbumRolyCard.
+  end
+  
   def self.get_todays(user, limit)
     
   end

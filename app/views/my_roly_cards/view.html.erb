@@ -3,7 +3,11 @@
 <div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
 </div>
 <div>
-	Business Unassigned
+	<select>
+		<option>Private</option>
+		<option>Public</option>>
+		
+	</select>
 </div>
 <div>
 	<%= @roly.title %>

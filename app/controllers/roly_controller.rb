@@ -6,7 +6,7 @@ class RolyController < ApplicationController
   def qrcode
     respond_to do |format|
       format.html
-      format.svg  { render :qrcode => params[:url], :level => :l, :unit => 10 }
+      format.svg  { render :qrcode => params[:url], :level => :l, :unit => 5 }
       format.png  { render :qrcode => params[:url] }
       format.gif  { render :qrcode => params[:url] }
       format.jpeg { render :qrcode => params[:url] }
@@ -38,4 +38,9 @@ class RolyController < ApplicationController
   def share
     
   end
+  
+  def card_by_code
+    
+  end
+    
 end

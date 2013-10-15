@@ -6,6 +6,7 @@ Roly::Application.routes.draw do
   get "admin/account"
 
   get "admin/edit_account"
+  match "/admin/switch_user/:user_id" => "admin#switch_user"
   
   match "app_info" => "admin#app_info"
   
@@ -35,6 +36,8 @@ Roly::Application.routes.draw do
   
   # roly cards  
 
+  match '/r/cbc/:share_code' => "roly#card_by_code"
+  match '/roly/card_by_location/:share_code' => "roly#get_card"
   match '/roly/get_card' => "roly#get_card"
   match '/roly/:roly_id' => "roly#detail"
   match '/roly/share/:roly_id' => "roly#share"
