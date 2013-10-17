@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  notes: MyString
+  favorite: 1
+  tags: MyString
+
+two:
+  notes: MyString
+  favorite: 1
+  tags: MyString

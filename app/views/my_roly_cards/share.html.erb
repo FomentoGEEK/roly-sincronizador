@@ -11,10 +11,10 @@
 	<%= @roly.address %>
 </div>
 <div style="text-align: center;font-size: 24pt">
-	456F34
+	<%= @roly.share_code %>
 </div>
 <div>
-	<img src="/qr.jpg?url=http://roly.dnsdojo.com:3000/r/cbc/456F34" />
+	<img src="/qr.jpg?url=http://roly.dnsdojo.com:3000/r/cbc/<%= @roly.share_code %>"  width="300px"/>
 </div>
 
 <hr>

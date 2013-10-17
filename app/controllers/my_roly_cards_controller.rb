@@ -5,8 +5,10 @@ class MyRolyCardsController < ApplicationController
   end
   
   def share
-    
     @roly = RolyCard.findByIdUser(params[:roly_id],@user)
+    @roly.share_code = "456F34"
+    @roly.share_date = DateTime.now()
+    @roly.save
   end
   
   def view

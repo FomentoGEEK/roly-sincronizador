@@ -36,7 +36,7 @@ class RolyController < ApplicationController
   end
   
   def share
-    
+    @roly = RolyCard.findByIdUser(params[:roly_id], @user)
   end
   
   def card_by_code

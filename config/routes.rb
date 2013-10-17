@@ -1,4 +1,9 @@
 Roly::Application.routes.draw do
+  # routes to mock setup controller
+  get "user/init_users"
+  get "user/init_user_rolies"
+  get "user/assign_rolies_to_user"
+
   get "admin/search_preferences"
 
   get "admin/privacy_preferences"

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131013233027) do
+ActiveRecord::Schema.define(:version => 20131017143554) do
 
   create_table "album_roly_cards", :force => true do |t|
     t.string   "notes"
@@ -81,8 +81,8 @@ ActiveRecord::Schema.define(:version => 20131013233027) do
     t.string   "google_circles"
     t.string   "foursquare"
     t.integer  "foursquare_checkins"
-    t.integer  "latitude"
-    t.integer  "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "address"
     t.string   "telephone"
     t.string   "email"
@@ -95,6 +95,21 @@ ActiveRecord::Schema.define(:version => 20131013233027) do
     t.datetime "photo_updated_at"
     t.integer  "user_id"
     t.text     "description"
+    t.string   "share_code"
+    t.datetime "share_date"
+    t.integer  "privacy"
+  end
+
+  create_table "user_roly_cards", :force => true do |t|
+    t.string   "notes"
+    t.integer  "favorite"
+    t.string   "tags"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.datetime "last_viewed"
+    t.datetime "last_edited"
+    t.integer  "user_id"
+    t.integer  "roly_card_id"
   end
 
   create_table "users", :force => true do |t|
