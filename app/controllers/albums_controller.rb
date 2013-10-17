@@ -41,22 +41,22 @@ class AlbumsController < ApplicationController
   end
   
   def favorite
-    @rolies = Album.get_rolies(@user,10)
+    @rolies = UserRolyCard.get_favorites(@user)
     
   end
   
   def recent
-    @rolies = Album.get_rolies(@user,10)
+    @rolies = UserRolyCard.get_recent(@user)
     
   end
   
   def recently_added
-    @rolies = Album.get_rolies(@user,10)
+    @rolies = UserRolyCard.get_recently_added(@user)
     
   end
   
   def today
-    @rolies = Album.get_rolies(@user,10)
+    @rolies = UserRolyCard.get_todays(@user)
     
   end
 

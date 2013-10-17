@@ -1,39 +1,4 @@
 <h1>Recent Rolies</h1>
-<h2>Today</h2>
-
-<table>
-	<% @rolies.each do |roly| %>
-	<tr>
-		<td><a href="/roly/<%= roly.id%>"><%= image_tag roly.photo.url(:thumb), :style => "width:50px;padding:10px;vertical-align:middle" %></a></td>
-		<td><a href="/roly/<%= roly.id%>"><%= roly.title %></a><br /><%= roly.address %><br />
-			<img src="/images/thumb/twitter.png" width="16" height="16">
-			<img src="/images/thumb/facebook.png" width="16" height="16">
-			<img src="/images/thumb/foursquare.png" width="16" height="16">
-			<img src="/images/thumb/map.png" width="16" height="16">
-		</td>
-		<td></td>
-	</tr>
-	<% end %>
-</table>
-
-<h2>Two days ago</h2>
-
-<table>
-	<% @rolies.each do |roly| %>
-	<tr>
-		<td><a href="/roly/<%= roly.id%>"><%= image_tag roly.photo.url(:thumb), :style => "width:50px;padding:10px;vertical-align:middle" %></a></td>
-		<td><a href="/roly/<%= roly.id%>"><%= roly.title %></a><br /><%= roly.address %><br />
-			<img src="/images/thumb/twitter.png" width="16" height="16">
-			<img src="/images/thumb/facebook.png" width="16" height="16">
-			<img src="/images/thumb/foursquare.png" width="16" height="16">
-			<img src="/images/thumb/map.png" width="16" height="16">
-		</td>
-		<td></td>
-	</tr>
-	<% end %>
-</table>
-
-<h2>Last week</h2>
 
 <table>
 	<% @rolies.each do |roly| %>
