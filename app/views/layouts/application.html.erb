@@ -9,10 +9,17 @@
 			body {
 				font-family: Arial
 			}
-			
+
 		</style>
 	</head>
 	<body>
+        <%- if user_signed_in? %>
+            Login as <%= current_user.email %> &nbsp;
+            <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+        <%- else %>
+            <%= link_to "Login", new_user_session_path %> &nbsp;
+            <%= link_to "Sign up", new_user_registration_path %>
+        <%- end %>
 		<div>
 			<div style="border:1px #70b8ff dashed;height:900px;width:300px">
 				<table style="border:1px #70b8ff dashed;width:300px">
@@ -23,7 +30,7 @@
 						</div></td>
 						<td style="border:1px #70b8ff dashed">
 						<div style="text-align:center">
-							<a href="/my_roly_cards/my">My Rolies</a>
+							<%= link_to "My Rolies", my_roly_cards_path %>
 						</div></td>
 						<td style="border:1px #70b8ff dashed">
 						<div style="text-align:center">

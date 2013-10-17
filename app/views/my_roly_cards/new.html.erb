@@ -1,10 +1,10 @@
 <div>
-	<h1>New Roly</h1>
-	<%= form_for @new_roly_form , url: request.path, :html => {:id => 'submit_form'} do |f| %>
+	<h1>New Roly Card</h1>
+	<%= form_for @new_roly_form , url: my_roly_cards_path, :html => {:id => 'submit_form'}, :method => :post do |f| %>
 	<%= f.text_field :title, html_options = {:id => 'title', :size => '20', :placeholder => 'Title'} %>
 	<br>
 	<%= f.text_field :address, html_options = {:id => 'address', :size => '20', :placeholder => 'Address'} %>
-	
+
   	<%= submit_tag("Create") %>
 	<% end %>
 </div>

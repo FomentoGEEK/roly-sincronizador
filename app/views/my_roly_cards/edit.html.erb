@@ -1,10 +1,7 @@
 <div>
 	Share
 </div>
-<div>
-	<a href="/my_roly_cards/edit/1">Edit</a>
-</div>
-	<%= form_for @edit_roly_form , multipart: true, url: request.path, :html => {:id => 'submit_form',:multipart => true} do |f| %>
+	<%= form_for @roly , multipart: true, url: my_roly_card_path, :html => {:id => 'submit_form',:multipart => true}, :method => :put do |f| %>
 <%= f.file_field  :photo %>
 <div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
 </div>
@@ -17,7 +14,7 @@
 <div>
 	<%= f.text_area :description, html_options = {:id => 'title', :cols => '35', :rows => '10', :placeholder => 'Description'} %>
 </div>
-	
+
 
 <hr>
 <table style="border:1px #70b8ff dashed;width:300px">

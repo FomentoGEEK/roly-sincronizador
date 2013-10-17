@@ -21,6 +21,7 @@ gem 'exifr'
 gem "paperclip", "~> 3.0"
 gem 'rqrcode-rails3'
 gem 'mini_magick'
+gem 'devise'
 
 
 # Gems used only for assets and not required
@@ -51,3 +52,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development, :test do
+    gem 'rspec-rails', '~> 2.0'
+    gem 'cucumber-rails', require: false
+    gem 'capybara'
+    gem 'database_cleaner'
+    gem 'factory_girl_rails'
+    gem 'rails_best_practices'
+end

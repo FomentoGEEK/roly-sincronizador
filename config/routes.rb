@@ -3,6 +3,11 @@ Roly::Application.routes.draw do
   get "user/init_users"
   get "user/init_user_rolies"
   get "user/assign_rolies_to_user"
+  devise_for :users , :controllers => {:registrations => "registrations"}
+
+  devise_scope :user do
+    get '/users/sign_up_mobile' => 'registrations#new_mobile'
+  end
 
   get "admin/search_preferences"
 
@@ -14,20 +19,16 @@ Roly::Application.routes.draw do
   match "/admin/switch_user/:user_id" => "admin#switch_user"
   
   match "app_info" => "admin#app_info"
-  
+
   # my businesses
   match '/businesses/view/:business_id' => "businesses#view_business"
   match '/businesses/add/:business_id' => "businesses#add"
   match '/businesses/new' => "businesses#new"
   match "/businesses/my" => "businesses#show"
-  
+
   # my roly cards
-  match '/my_roly_cards/view/:roly_id' => "my_roly_cards#view"
-  match '/my_roly_cards/edit/:roly_id' => "my_roly_cards#edit"
-  match '/my_roly_cards/new' => "my_roly_cards#new"
-  match "/my_roly_cards/my" => "my_roly_cards#show"
-  match "/my_roly_cards/share/:roly_id" => "my_roly_cards#share"
-  
+  resources :my_roly_cards
+
   # album controller
   match '/albums/edit/:album_id' => "albums#edit_album"
   match '/albums/view/:album_id' => "albums#view_album"
@@ -38,8 +39,8 @@ Roly::Application.routes.draw do
   match "/albums/recent" => "albums#recent"
   match "/albums/recently_added" => "albums#recently_added"
   match "/albums/today" => "albums#today"
-  
-  # roly cards  
+
+  # roly cards
 
   get "roly/search"
   match '/r/cbc/:share_code' => "roly#card_by_code"
@@ -51,7 +52,7 @@ Roly::Application.routes.draw do
 
   get "roly/map"
 
-  # roly share 
+  # roly share
   match '/qr' => "roly#qrcode"
   match '/' => "albums#recent"
 
