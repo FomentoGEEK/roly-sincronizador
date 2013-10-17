@@ -2,7 +2,7 @@ class RolyController < ApplicationController
   layout "application"
   #, :only => [:action, :action], :except => [:action, :action]
 
-  before_filter :login_required, :except => [:login]
+  #before_filter :login_required, :except => [:login]
   def qrcode
     respond_to do |format|
       format.html
@@ -30,12 +30,12 @@ class RolyController < ApplicationController
 
   def map
   end
-  
+
   def get_card
-    
+
   end
-  
+
   def share
-    
+
   end
 end
