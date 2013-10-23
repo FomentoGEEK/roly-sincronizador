@@ -41,15 +41,13 @@ Roly::Application.routes.draw do
   
   # roly cards  
 
+  get "roly/search"
   match '/r/cbc/:share_code' => "roly#card_by_code"
   match '/roly/card_by_location/:share_code' => "roly#get_card"
   match '/roly/get_card' => "roly#get_card"
   match '/roly/:roly_id' => "roly#detail"
   match '/roly/share/:roly_id' => "roly#share"
 
-  get "roly/search"
-
-  get "roly/detail"
 
   get "roly/map"
 
