@@ -1,11 +1,29 @@
-<div>
-	<h1>New Roly Card</h1>
-	<%= form_for @new_roly_form , url: my_roly_cards_path, :html => {:id => 'submit_form'}, :method => :post do |f| %>
-	<%= f.text_field :title, html_options = {:id => 'title', :size => '20', :placeholder => 'Title'} %>
-	<br>
-	<%= f.text_field :address, html_options = {:id => 'address', :size => '20', :placeholder => 'Address'} %>
-
-  	<%= submit_tag("Create") %>
+<div class="row-fluid">
+  <div class="title col-xs-12">
+	 <h2>New Roly Card</h2>
+  </div>
+	<%= form_for @new_roly_form , url: my_roly_cards_path, :html => {:id => 'submit_form', :role => "form", :class => 'form-horizontal'}, :method => :post do |f| %>
+  <div class="form-group">
+	 <label for="title" class="col-xs-3 control-label">
+    Title
+   </label>
+   <div class="col-xs-9 col-lg-6">
+    <%= f.text_field :title, html_options = {:id => 'title', :size => '20', :placeholder => 'Title', :class => 'form-control'} %>
+   </div>
+  </div>
+  <div class="form-group">
+   <label for="adress" class="col-xs-3 control-label">
+    Adress
+   </label>
+   <div class="col-xs-9 col-lg-6">
+	  <%= f.text_field :address, html_options = {:id => 'address', :size => '20', :placeholder => 'Address', :class => 'form-control'} %>
+   </div>
+  </div>
+  <div class="form-group">
+   <div class="col-xs-12 center">
+    <%= submit_tag "Create", html_options = {:class => 'btn btn-default'} %>
+   </div>
+  </div>
 	<% end %>
 </div>
 

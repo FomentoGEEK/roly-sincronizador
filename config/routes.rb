@@ -17,7 +17,7 @@ Roly::Application.routes.draw do
 
   get "admin/edit_account"
   match "/admin/switch_user/:user_id" => "admin#switch_user"
-  
+
   match "app_info" => "admin#app_info"
 
   # my businesses
@@ -55,6 +55,8 @@ Roly::Application.routes.draw do
   # roly share
   match '/qr' => "roly#qrcode"
   match '/' => "albums#recent"
+
+  root :to => 'my_roly_cards#index'
 
 
   # The priority is based upon order of creation:

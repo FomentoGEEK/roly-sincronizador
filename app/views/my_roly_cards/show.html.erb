@@ -1,7 +1,19 @@
-<div><a href="/my_roly_cards/share/<%= @roly.id %>">Share</a></div>
-<div><%= link_to "Edit", edit_my_roly_card_path(@roly) %></div>
-<div><%= link_to "Delete", my_roly_card_path(@roly), :method => :delete %></div>
-<div><%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
+<div class="title">
+  <h3> <%= @roly.title %></h3>
+</div>
+<div class="row-fluid">
+  <div class="col-xs-4">
+    <a href="/my_roly_cards/share/<%= @roly.id %>" class="btn btn-default">Share</a>
+  </div>
+  <div class="col-xs-4">
+    <%= link_to "Edit", edit_my_roly_card_path(@roly), :class => 'btn btn-default' %>
+  </div>
+  <div class="col-xs-4">
+    <%= link_to "Delete", my_roly_card_path(@roly), :method => :delete, :class => 'btn btn-danger' %>
+  </div>
+</div>
+<div class="row-fluid">
+  <%= image_tag @roly.photo.url(:medium), :style => "width:300px;padding:10px;vertical-align:middle" %>
 </div>
 <div>
 	Business Unassigned
